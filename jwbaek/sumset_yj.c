@@ -1,0 +1,1 @@
+#include <stdio.h>#include <stdlib.h>int main(void){long long n, i;long long * arr;scanf("%lld", &n);arr = (long long *)calloc(sizeof(long long), n+1);arr[1] = 1;arr[2] = 2;for (i = 3; i <= n; i++){if(i % 2 == 1){arr[i] = arr[i-1]%1000000000;}else if(i %2 == 0){arr[i] = arr[i-1]%1000000000 + arr[i/2]%1000000000;}}  printf("%lld\n", arr[n]);}
